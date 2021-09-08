@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display: grid;
+            /* 25% 25% 25% 25% */
+            /* repeat(4, calc(100% / 4)) */
+
+            /* grid-template-columns: repeat(4 25%); */
+            grid-column-gap: 10px;
+            /* 이럴경우 100%+@ 초과 => 해결책 1fr */
+
+            grid-template-columns: repeat(4, 1fr);
+            /* 2fr은 1fr의 2배크기 */
+
+            background-color: pink;
+        }
+        .column{
+            /* width: 100px; */
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+</body>
+</html>
